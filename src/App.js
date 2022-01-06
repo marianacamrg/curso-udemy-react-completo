@@ -29,16 +29,22 @@ class App extends Component {
 
   adicionarComentario = (evento) => {
     evento.preventDefault();
-    const novoComentario = { ...this.state.novoComentario, data: new Date()}
+    const novoComentario = { ...this.state.novoComentario, data: new Date() }
     this.setState({
       comentarios: [...this.state.comentarios, novoComentario],
-      novoComentario: {nome: '', email: '', mensagem: ''}
+      novoComentario: { nome: '', email: '', mensagem: '' }
     })
+  }
+
+  removerComentario = comentario => {
+    let lista = this.state.comentarios;
+    lista = lista.filter(c => c !== comentario)
+    this.setState({ comentarios: lista })
   }
 
   digitacao = evento => {
     const { name, value } = evento.target;
-    this.setState({ novoComentario: { ...this.state.novoComentario, [name]: value}})
+    this.setState({ novoComentario: { ...this.state.novoComentario, [name]: value } })
   }
 
   render() {
@@ -51,6 +57,7 @@ class App extends Component {
             nome={comentario.nome}
             email={comentario.email}
             data={comentario.data}
+            onRemove={this.removerComentario.bind(this, comentario)}
           >
             {comentario.mensagem}
           </Comentario>
