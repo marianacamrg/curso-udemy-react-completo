@@ -1,5 +1,53 @@
 .Comentario {
-    background-color: #eee;
+    background-color: #fff;
     margin-bottom: 2rem;
-    border: 1px solid #555;
+    border-radius: .5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, .1), 0 4px 6px -2px rgba(0, 0, 0, .05);
+    padding: 1rem;
+    display: flex;
+}
+
+.Comentario:hover {
+    background-color: #cce5ff;
+}
+
+.Comentario .avatar {
+    max-width: 80px;
+    max-height: 80px;
+}
+
+.Comentario .conteudo {
+    margin-left: 1rem;
+    width: 100%;
+    position: relative;
+}
+
+.Comentario .conteudo .nome {
+    font-size: 1.25rem;
+    margin: .5rem 0 .25rem 0;
+    color: #2d3748
+}
+
+.Comentario .conteudo .email {
+    color: #007bff;
+}
+
+.Comentario .conteudo .mensagem {
+    color: #4a5568;
+    margin: .5rem 0;
+}
+
+.Comentario .conteudo .data {
+    text-align: right;
+    color: #718096;
+    font-size: .75rem;
+}
+
+.Comentario .conteudo button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+    background: none;
+    font-size: 1.5rem;
 }
