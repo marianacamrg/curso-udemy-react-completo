@@ -1,0 +1,46 @@
+.Usuario {
+  padding: 1.5rem;
+  position: relative;
+  margin: 1rem 0;
+  border-radius: .25rem;
+  background-color: #FFF;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .14);
+}
+
+.Usuario:hover {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .14);
+}
+
+.Usuario ul {
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.Usuario ul li strong {
+  color: #DA3C78;
+}
+
+.Usuario button {
+  top: 0.5rem;
+  right: 0.5rem;
+  border: none;
+  outline: none;
+  color: #FFF;
+  background: none;
+  cursor: pointer;
+  line-height: 1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: sans-serif;
+  position: absolute;
+  border-radius: 1.5rem;
+  background-color: #ced4da;
+  padding: .2rem .35rem .35rem .35rem;
+}
+
+.Usuario button:hover,
+.Usuario button:focus {
+  color: #FFF;
+  background-color: #FF6CA8;
+}

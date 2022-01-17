@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import './App.css';
 import Comentario from './components/Comentario';
+import CicloVida from './components/CiclodeVida/CicloVida';
 
 class App extends Component {
 
@@ -50,7 +51,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Meu Projeto</h1>
+        <h1>Meus Projetos</h1>
+        <div>
+        <h2>Ciclo de Vida - Adicionando Usuários com API</h2>
+        <CicloVida />
+        </div>
+        <h2>Manipulando Comentários</h2>
         {this.state.comentarios.map((comentario, indice) => (
           <Comentario
             key={indice}

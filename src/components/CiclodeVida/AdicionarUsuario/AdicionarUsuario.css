@@ -1,0 +1,74 @@
+.AdicionarUsuario {
+  margin: 2rem 0;
+  padding: 1.25rem;
+  background-color: #FFF;
+  background-color: #FFEBF3;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .14);
+}
+
+.AdicionarUsuario h2 {
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  color: #CA2C68;
+  margin: .25rem 0;
+}
+
+.AdicionarUsuario .Linha {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -.5rem;
+  padding: .5rem 0;
+}
+
+.AdicionarUsuario .Coluna {
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+  padding: 0 .5rem;
+}
+
+.AdicionarUsuario label {
+  display: inline-block;
+  margin-bottom: .5rem;
+}
+
+.AdicionarUsuario input {
+  display: block;
+  width: 100%;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #FFF;
+  border: 1px solid #FFBCD8;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.AdicionarUsuario button {
+  color: #FFF;
+  cursor: pointer;
+  display: inline-block;
+  background-color: #FF6CA8;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid transparent;
+  padding: .375rem .75rem;
+  margin-top: .25rem;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.AdicionarUsuario input:focus, .AdicionarUsuario button:focus {
+  outline: 0;
+  border-color: #FF8CC8;
+  box-shadow: 0 0 0 .2rem rgba(255, 188, 216, .5);
+}
+
+.AdicionarUsuario button:hover {
+  background-color: #DA3C78;
+}
