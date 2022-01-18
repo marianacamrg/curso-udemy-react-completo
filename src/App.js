@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import './App.css';
-import Comentario from './components/Comentario';
+import Comentario from './components/Comentarios/Comentario';
 import CicloVida from './components/CiclodeVida/CicloVida';
 
 class App extends Component {
