@@ -6,6 +6,7 @@ class CicloVida extends Component {
 
     render() {
         return <div>
+            <h2>Ciclo de Vida - Adicionando Usuários com API</h2>
             <Usuarios />
         </div>
     }

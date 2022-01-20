@@ -7,6 +7,7 @@ import imagemUsuario from './usuario.png';
 
 const Comentario = (props) => (
   <div className="Comentario">
+    <h2>States - Adicionando Comentários</h2>
     <img class="avatar" src={imagemUsuario} alt={props.nome} />
     <div className="conteudo">
       <h2 class="nome">{props.nome}</h2>

@@ -7,49 +7,70 @@ body {
 }
 
 .App {
-  padding: 0 30px;
-}
-
-.Novo-Comentario {
-  border-radius: .5rem;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, .1), 0 4px 6px -2px rgba(0, 0, 0, .05);
-  padding: 1rem;
-  background-color: #fff;
-  margin-bottom: 3rem;
-}
-
-.Novo-Comentario h2 {
-  margin: 0;
-}
-
-.Novo-Comentario input, .Novo-Comentario textarea {
-  color: #4a5568;
-  background-color: #fff;
-  border: 1px solid #e2e8f0;
-  font-size: 1rem;
-  padding: .5rem 1rem;
-  margin: 1rem 0;
-  display: block;
-  border-radius: .5rem;
-}
-
-.Novo-Comentario input {
-  width: 300px;
-}
-
-.Novo-Comentario textarea {
   width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  color: #212529;
 }
 
-.Novo-Comentario button {
-  background-color: #4299e1;
+@media (min-width: 576px) {
+  .App {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .App {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .App {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .App {
+    max-width: 1140px;
+  }
+}
+
+.App nav {
+  padding: 0;
+  background-color: #FFEBF3;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .14);
+}
+
+.App nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.App nav ul li {
+  display: block;
+}
+
+.App nav ul li a {
+  display: block;
+  padding: 1rem;
+  color: #DA3C78;
+  text-decoration: none;
+}
+
+.App nav ul li a:hover{
+  background-color: #FFBCD8;
+}
+
+.App nav ui li a.active {
+  background-color: #FF6CA8;
   color: #fff;
-  font-size: 1rem;
-  padding: .5rem 1rem;
-  border-radius: .5rem;
-  border: none;
-}
-
-.Novo-Comentario button:hover {
-  background-color: #2b6cb0;
 }

@@ -1,108 +1,35 @@
 import React, { Component } from 'react';
+import { Routes, Link, Route } from 'react-router-dom';
 
 import './App.css';
-import Comentario from './components/Comentarios/Comentario';
+import AdicionarComentario from './components/Comentarios/AdicionarComentario/index';
 import CicloVida from './components/CiclodeVida/CicloVida';
+import Home from './components/Home/index';
 
 class App extends Component {
 
-  state = {
-    comentarios: [
-      {
-        nome: 'Mariana Camargo',
-        email: 'marianacamrg@gmail.com',
-        data: new Date(1999, 4, 14),
-        mensagem: 'Olá, tudo bem?'
-      },
-      {
-        nome: 'Carlos Daniel',
-        email: 'carlos@gmail.com',
-        data: new Date(1999, 12, 20),
-        mensagem: 'Olá, tudo bem sim e com você?'
-      }
-    ],
-    novoComentario: {
-      nome: '',
-      email: '',
-      mensagem: ''
-    }
-  }
-
-  adicionarComentario = (evento) => {
-    evento.preventDefault();
-    const novoComentario = { ...this.state.novoComentario, data: new Date() }
-    this.setState({
-      comentarios: [...this.state.comentarios, novoComentario],
-      novoComentario: { nome: '', email: '', mensagem: '' }
-    })
-  }
-
-  removerComentario = comentario => {
-    let lista = this.state.comentarios;
-    lista = lista.filter(c => c !== comentario)
-    this.setState({ comentarios: lista })
-  }
-
-  digitacao = evento => {
-    const { name, value } = evento.target;
-    this.setState({ novoComentario: { ...this.state.novoComentario, [name]: value } })
-  }
-
   render() {
     return (
-      <div className="App">
-        <h1>Meus Projetos</h1>
-        <div>
-        <h2>Ciclo de Vida - Adicionando Usuários com API</h2>
-        <CicloVida />
+      <>
+        <div className="App">
+          <header>
+            <nav>
+              <ul>
+                <li><Link to="/">Página Inicial</Link></li>
+                <li><Link to="/usuarios">Usuários</Link></li>
+                <li><Link to="/comentarios">Comentários</Link></li>
+              </ul>
+            </nav>
+          </header>
+          <main>
+            <Routes>
+              <Route path="/usuarios" element={<CicloVida />} />
+              <Route path="/comentarios" element={<AdicionarComentario />} />
+              <Route path="*" element={<Home />} />
+            </Routes>
+          </main>
         </div>
-        <h2>Manipulando Comentários</h2>
-        {this.state.comentarios.map((comentario, indice) => (
-          <Comentario
-            key={indice}
-            nome={comentario.nome}
-            email={comentario.email}
-            data={comentario.data}
-            onRemove={this.removerComentario.bind(this, comentario)}
-          >
-            {comentario.mensagem}
-          </Comentario>
-        ))}
-
-        <form method="post" onSubmit={this.adicionarComentario} className="Novo-Comentario">
-          <h2>Adicionar Comentário</h2>
-          <div>
-            <input
-              type="text"
-              name="nome"
-              value={this.state.novoComentario.nome}
-              onChange={this.digitacao}
-              required
-              placeholder="Digite seu nome" />
-          </div>
-          <div>
-            <input
-              type="email"
-              name="email"
-              value={this.state.novoComentario.email}
-              onChange={this.digitacao}
-              required
-              placeholder="Digite seu e-mail" />
-          </div>
-          <div>
-            <textarea
-              name="mensagem"
-              value={this.state.novoComentario.mensagem}
-              onChange={this.digitacao}
-              required
-              rows="4" />
-          </div>
-          <button
-            type="submit">
-            Adicionar Comentário
-          </button>
-        </form>
-      </div>
+      </>
     );
   }
 }
