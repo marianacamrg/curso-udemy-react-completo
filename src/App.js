@@ -6,6 +6,7 @@ import AdicionarComentario from './components/Comentarios/AdicionarComentario/in
 import CicloVida from './components/CiclodeVida/CicloVida';
 import Home from './components/Home/index';
 import ListaFrutas from './components/FrutasRedux/Components/ListaFrutas';
+import AdicionaCliente from './components/Formik/Components/AdicionaCliente';
 
 class App extends Component {
 
@@ -28,6 +29,7 @@ class App extends Component {
               <Route path="/usuarios" element={<CicloVida />} />
               <Route path="/comentarios" element={<AdicionarComentario />} />
               <Route path="/frutas" element={<ListaFrutas />} />
+              <Route path="/formulario" element={<AdicionaCliente />} />
               <Route path="*" element={<Home />} />
             </Routes>
           </main>

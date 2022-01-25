@@ -11,13 +11,14 @@ class Home extends Component {
                 <div className="Home">
                     <main>
                         <h1>Meus Projetos</h1>
-                        <h2>Projetos realizados em cursos de Estudo</h2>
+                        <h2>Projetos realizados no curso 'React Completo do básico ao avançado' ministrado pelo professor Rafael Calunga</h2>
                         <div className="Menu">
                             <p>Todos os projetos</p>
                             <ul>
                                 <li><Link to="/usuarios">Usuários</Link></li>
                                 <li><Link to="/comentarios">Comentários</Link></li>
                                 <li><Link to="/frutas">Frutas Redux</Link></li>
+                                <li><Link to="/formulario">Formulário</Link></li>
                             </ul>
                         </div>
                     </main>
